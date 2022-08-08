@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/semi */
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable @angular-eslint/use-lifecycle-interface */
 import { Component, OnInit } from '@angular/core';
 import { Registro } from '../cadastro/models/registro';
 import { Router } from '@angular/router';
@@ -20,7 +23,7 @@ export class LoginPage {
 
   constructor(
     public auth: AngularFireAuth,
-    private loadingCtrl: LoadingController, 
+    private loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
     private router: Router,
     public authService: AuthService,
@@ -39,12 +42,12 @@ async login(){
   }
   catch(error) {
     let message: string;
-  
+
     switch(error.code) {
       case 'auth/wrong-password':
         message = 'Senha/Email incorreto';
         break;
-  
+
         case 'auth/invalid-email':
         message = 'Email inválido!';
         break;
@@ -60,33 +63,41 @@ async login(){
         case 'auth/user-not-found':
           message = 'Usuario não encontrado'
           break;
-          
+
           case 'auth/too-many-requests':
           message = 'Muitas tentativas de login. Por favor, tente novamente mais tarde'
           break;
-        
+
+          case 'auth/missing-email':
+          message = 'Campo(s) vazio(s), preencha todos antes de efetuar o login'
+          break;
+
+          case 'auth/internal-error':
+            message = 'Erro na autenticação, revise os dados inseridos nos campos e tente novamente'
+            break;
+
     }
-    
-  
+
+
   this.presentToast(message);
   }
   finally {
     this.loading.dismiss();
   }
-  
-  
+
+
   }
-  
+
     async presentLoading() {
       this.loading = await this.loadingCtrl.create({ message: 'Autenticando...'});
     return this.loading.present();
-    
+
   }
-  
+
   async presentToast(message: string) {
     const toast = await this.toastCtrl.create({ message, duration: 2000 });
     toast.present();
-  
+
   }
 }
 
