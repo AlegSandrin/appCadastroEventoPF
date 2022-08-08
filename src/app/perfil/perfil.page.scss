@@ -1,0 +1,75 @@
+#container {
+  text-align: center;
+
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 2%;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-style:initial;
+}
+  
+  .toolbar {
+ color:black;
+ --background:rgb(213, 129, 32);
+  }
+
+  .my-custom-menu {
+    --width: 500px;
+  }
+
+
+  
+  .imagem{
+width: 150px;
+height: 150px;
+position:relative;
+top:10%;
+display: block;
+ margin: 0px auto;
+transform: translateY(-70%);
+  }
+
+  .hr1 {
+    top:70px;
+    height: 50px;
+position:relative;
+    border-top: 30px thick solid rgb(0, 0, 0);
+    width: 100%;
+    color:rgb(213, 129, 32);
+   }
+
+   .fundobranco{
+    --background:rgb(217, 217, 217);
+  color:black;
+  }
+
+  
+    ion-button{
+    --border-color: orange;
+    --background: orange;
+    --color:black;
+    }
+  
+    .content{
+     box-align: middle;
+    }
+
+    .alinhar{
+      background:none;
+      --background:none;
+      width:80%;
+      height: auto;
+      left:10%;
+      right:0;
+      top:240px;
+      position:relative;
+    transform: translateY(-50%);
+    }
+
+    .transparent2{
+      border-color: rgba(0, 0, 0, 0);
+      background-color: rgba(0, 0, 0, 0);
+        background: transparent;
+        --background: transparent;
+    }

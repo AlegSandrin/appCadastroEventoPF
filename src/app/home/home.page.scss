@@ -1,0 +1,84 @@
+#container {
+  text-align: center;
+  --border-color: orange;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 27%;
+  transform: translateY(-50%);
+  border-color: orange;
+
+}
+
+#banner {
+  text-align: center;
+  
+  font-size: 40px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style:initial;
+  color:rgb(240, 133, 53);
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 30%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+#backgroundcolor {
+  background-color: orange;
+}
+
+.button{
+  --border-color: orange;
+  --background: orange;
+  --color:black;
+}
+
+.imagem {
+  top: 18%;
+  position:relative;
+  width: 80%;
+  height: auto;
+  left: 10%;
+}
+
+.imagem2 {
+  top: 22%;
+  position:relative;
+  width: 80%;
+  height: auto;
+  left: 10%;
+}
+
+.transparent{
+  background: transparent;
+    --background: transparent;
+}
+
+.footerzin{
+  top: 94%;
+  background-color: transparent;
+  --border-width:100px;
+}
+
+.toolbarcolor{
+  --border-width:100px;
+}

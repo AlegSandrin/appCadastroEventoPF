@@ -1,0 +1,84 @@
+<body style="background-color: rgb(246, 246, 246);">
+
+<ion-header >
+<ion-toolbar mode="md" class="toolbar">
+  <ion-buttons slot="start">
+<ion-menu-button> </ion-menu-button>
+</ion-buttons>
+<ion-title>
+  Seu Perfil
+</ion-title>
+</ion-toolbar>
+</ion-header>
+
+
+<ion-content class="transparent2">
+
+
+<hr style="background-color:rgb(228, 142, 44);" class="hr1">
+
+<img class="imagem" src="assets/img/avataricon.png">
+
+
+<div id="container">
+
+
+
+<form>
+  
+  <ion-list class="alinhar" lines="none">
+
+    <ion-item color="orange" mode="md" class="fundobranco" fill="outline" >
+      <ion-input disabled="true" type="text" placeholder="Número do ingresso:"></ion-input>
+      </ion-item>
+
+      <ion-item color="orange" mode="md" class="fundobranco" fill="outline" >
+        <ion-input disabled="true" type="text" placeholder="Número do pedido:"></ion-input>
+        </ion-item>
+
+        <ion-item color="orange" mode="md" class="fundobranco" fill="outline" >
+          <ion-input disabled="true" type="text" placeholder="Código do Ticket:"></ion-input>
+          </ion-item>
+
+<br>
+
+  <ion-item color="orange" mode="md" class="fundobranco" fill="outline" >
+  <ion-input disabled="true" type="text" (click)="lerDados(nome)" placeholder="Nome:">{{nome}}</ion-input>
+  </ion-item>
+
+
+
+  <ion-item color="orange" mode="md" class="fundobranco" fill="outline" >
+  <ion-input disabled="true" type="password" placeholder="Email:"></ion-input>
+  </ion-item>
+
+
+
+<ion-item color="orange" mode="md" class="fundobranco" fill="outline" >
+  <ion-input disabled="true" type="text" placeholder="CPF:"></ion-input>
+  </ion-item>
+
+
+
+  <ion-item color="orange" mode="md" class="fundobranco" fill="outline" >
+  <ion-input disabled="true" type="password" placeholder="Idade:"></ion-input>
+  </ion-item>
+
+  <ion-item color="orange" mode="md" class="fundobranco" fill="outline" >
+    <ion-input disabled="true" type="password" placeholder="Telefone:"></ion-input>
+    </ion-item>
+
+<br>
+
+<br><ion-button class="botao" expand="block" class="button" shape="round">Atualizar Dados</ion-button>
+
+<br><br><br>
+
+</ion-list>
+</form>
+
+
+</div>
+</ion-content>
+
+</body>

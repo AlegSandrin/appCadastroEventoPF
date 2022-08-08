@@ -1,0 +1,7 @@
+{
+  "name": "appCadastroEventoPF",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

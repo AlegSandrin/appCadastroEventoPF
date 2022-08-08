@@ -1,0 +1,46 @@
+#container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style:initial;
+  }
+  
+  #toolbar {
+      text-align: center;
+  }
+
+  ion-button{
+    --border-color: orange;
+    --background: orange;
+    --color:black;
+  }
+
+  .content{
+    padding: 16px;
+    background-color:rgb(217, 217, 217);
+color:black;
+  }
+
+  #contente{
+
+    --background:rgb(255, 255, 255);
+
+  }
+
+  .fundobranco{
+    --background:rgb(217, 217, 217);
+  color:black;
+  --border-color:rgb(217, 217, 217);
+  --background-hover:rgb(201, 201, 201);
+  --background-focused:rgb(201, 201, 201);
+  }
+
+  .cor{
+    --background:none;
+    --color:none;
+  }

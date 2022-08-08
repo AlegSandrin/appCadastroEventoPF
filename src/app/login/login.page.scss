@@ -1,0 +1,36 @@
+#container {
+    text-align: center;
+  
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 1%;
+    transform: translateY(-50%);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style:initial;
+}
+
+#toolbar {
+    text-align: center;
+}
+
+
+
+ion-button{
+  --border-color: orange;
+  --background: orange;
+  --color:black;
+}
+
+
+.fundobranco{
+  --background:rgb(217, 217, 217);
+color:black;
+}
+
+.imagem {
+  top: 1%;
+  position:relative;
+  width: 80%;
+  height: auto;
+}

@@ -1,0 +1,44 @@
+<body style="background-color: rgb(255, 255, 255);"></body>
+
+
+  <ion-header>
+    <ion-toolbar>
+
+
+
+      <ion-title> Login </ion-title>
+
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+
+    </ion-toolbar>
+  </ion-header>
+
+
+  
+
+<div id="container"> 
+  
+<img class="imagem" src="assets/img/EVENTO.png">
+
+  <form>
+  
+    <ion-item color="orange" mode="md" class="fundobranco" shape="round" fill="outline" >
+    <ion-input [(ngModel)]="userLogin.email" name="email" type="text" placeholder="Email:" ></ion-input>
+    </ion-item>
+
+<br>
+
+    <ion-item color="orange" mode="md" class="fundobranco" shape="round" fill="outline" >
+    <ion-input [(ngModel)]="userLogin.senha" name="senha" type="password" placeholder="Senha:" ></ion-input>
+    </ion-item>
+
+  <br>
+
+  <br><ion-button (click)="login()" expand="block" class="button" shape="round">Entrar</ion-button>
+  
+  </form>
+
+  </div>
+
