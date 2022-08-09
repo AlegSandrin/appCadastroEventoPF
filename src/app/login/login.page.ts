@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/quotes */
 /* eslint-disable @typescript-eslint/semi */
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable @angular-eslint/use-lifecycle-interface */
@@ -6,7 +7,8 @@ import { Registro } from '../cadastro/models/registro';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { NavController, LoadingController, ToastController } from '@ionic/angular';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AngularFireAuth} from '@angular/fire/compat/auth';
+import { getAuth, onAuthStateChanged } from "firebase/auth"
 
 @Component({
   selector: 'app-login',

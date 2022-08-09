@@ -27,43 +27,43 @@
 
 <ion-content id="contente" class="ion-padding">
   <form [formGroup]="cadastroForm" (submit)="registro()" novalidate>
- 
-  
+
+
     <ion-item color="orange" mode="md" fill="solid" class="fundobranco" >
       <ion-label position="floating">Nome Completo:</ion-label>
       <ion-input type="text" formControlName="nome"></ion-input>
     </ion-item>
-    
+
     <ion-item color="orange" mode="md" class="fundobranco" fill="solid">
       <ion-label position="floating">Email:</ion-label>
       <ion-input [(ngModel)]="userRegister.email" type="text" formControlName="email"></ion-input>
     </ion-item>
-  
+
     <ion-item color="orange" mode="md" class="fundobranco" fill="solid">
       <ion-label position="floating">Senha:</ion-label>
       <ion-input [(ngModel)]="userRegister.senha" type="password" formControlName="senha"></ion-input>
     </ion-item>
-  
+
     <ion-item color="orange" mode="md" class="fundobranco" fill="solid">
       <ion-label position="floating">CPF:</ion-label>
       <ion-input type="number" formControlName="cpf"></ion-input>
     </ion-item>
-    
+
     <ion-item color="orange" mode="md" class="fundobranco" fill="solid">
       <ion-label position="floating">Idade:</ion-label>
       <ion-input type="number" formControlName="idade"></ion-input>
     </ion-item >
-  
+
     <ion-item color="orange" mode="md" class="fundobranco" fill="solid">
       <ion-label position="floating">Telefone:</ion-label>
       <ion-input type="number" formControlName="telefone"></ion-input>
     </ion-item>
-    
+
     <ion-item color="orange" mode="md" class="fundobranco" fill="solid">
       <ion-label position="floating">Cidade:</ion-label>
       <ion-input type="text" formControlName="cidade"></ion-input>
     </ion-item>
-  
+
     <ion-item color="orange" mode="md" class="fundobranco" fill="solid">
       <ion-label position="floating">CEP:</ion-label>
       <ion-input type="number" formControlName="cep"></ion-input>
@@ -72,7 +72,7 @@
 
 
   <br><ion-button (click)="cadastro()" expand="block" class="button"  shape="round" [disabled]="!cadastroForm.valid" type="submit" >Cadastrar</ion-button>
-  
+
 </form>
 </ion-content>
 

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Registro } from '../cadastro/models/registro';
- 
+
 
 
 @Injectable({
@@ -12,7 +12,7 @@ export class AuthService {
   constructor(public auth: AngularFireAuth) { }
 
   login(user: Registro) {
-    return this.auth.signInWithEmailAndPassword(user.email, user.senha)
+    return this.auth.signInWithEmailAndPassword(user.email, user.senha);
   }
 
   register(user: Registro){

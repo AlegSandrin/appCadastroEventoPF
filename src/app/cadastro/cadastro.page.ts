@@ -1,3 +1,7 @@
+import { set } from 'firebase/database';
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+/* eslint-disable max-len */
+/* eslint-disable @typescript-eslint/quotes */
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NavController, LoadingController, ToastController } from '@ionic/angular';
@@ -6,6 +10,9 @@ import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { Observable } from 'rxjs';
+import { collection, addDoc, doc, setDoc } from "firebase/firestore";
+import { initializeApp } from "firebase/app";
+import { getFirestore} from "firebase/firestore";
 
 @Component({
   selector: 'app-cadastro',
@@ -17,14 +24,14 @@ public cadastroForm: FormGroup;
 public loading;
 public userRegister: Registro = {};
 
-  constructor(public authService: AuthService, 
-    public formBuilder: FormBuilder, 
-    private navCtrl: NavController, 
-    private loadingCtrl: LoadingController, 
+  constructor(public authService: AuthService,
+    public formBuilder: FormBuilder,
+    private navCtrl: NavController,
+    private loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
     private router: Router,
     public db: AngularFireDatabase,
-    ) 
+    )
     {
     this.cadastroForm = this.formBuilder.group({
       nome: ['', Validators.compose([Validators.required, Validators.minLength(4)])],
@@ -42,16 +49,18 @@ public userRegister: Registro = {};
   ngOnInit() {
   }
 
-registro() {
-  this.db.database.ref('/cadastros').push(this.cadastroForm.value);
-}
+  async registro() {
+//this.db.database.ref('/cadastros').push(this.cadastroForm.value); - Código anterior que usei para cadastro dos dados através do Realtime Database
+  }
 
 
 async cadastro(){
 await this.presentLoading();
 
 try {
-  await this.authService.register(this.userRegister);
+  const newUser = await this.authService.register(this.userRegister);
+  const dbf = getFirestore();
+  await setDoc(doc(dbf, "users", newUser.user.uid), this.cadastroForm.value);
   this.loading.dismiss(this.router.navigate(['/confirmcadastro']));
 }
 catch(error) {
@@ -66,7 +75,7 @@ catch(error) {
       message = 'Email inválido!';
       break;
   }
-  
+
 
 this.presentToast(message);
 }
@@ -80,7 +89,7 @@ finally {
   async presentLoading() {
     this.loading = await this.loadingCtrl.create({ message: 'Por favor, aguarde...'});
   return this.loading.present();
-  
+
 }
 
 async presentToast(message: string) {
