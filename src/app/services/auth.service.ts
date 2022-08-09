@@ -20,7 +20,7 @@ export class AuthService {
   }
 
   logout() {
-    this.auth.signOut()
+    this.auth.signOut();
   }
 
   getAuth() {
