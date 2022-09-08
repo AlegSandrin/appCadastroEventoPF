@@ -30,7 +30,7 @@ public userRegister: Registro = {};
     private loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
     private router: Router,
-    public db: AngularFireDatabase,
+    private db: AngularFireDatabase,
     )
     {
     this.cadastroForm = this.formBuilder.group({
@@ -42,6 +42,8 @@ public userRegister: Registro = {};
       telefone: ['', Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(11)])],
       cep: ['', Validators.compose([Validators.required, Validators.minLength(7), Validators.maxLength(8)])],
       cidade: ['', Validators.compose([Validators.required])],
+      codingresso: this.gerarCodigo(12),
+      numingresso: this.gerarNumero(10),
     });
 
    }
@@ -98,5 +100,23 @@ async presentToast(message: string) {
 
 }
 
+
+gerarCodigo(tamanho) {
+  var stringAleatoria = '';
+  var caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  for (var i = 0; i < tamanho; i++) {
+      stringAleatoria += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+  }
+  return stringAleatoria;
+}
+
+gerarNumero(tamanho) {
+  var stringAleatoria = '';
+  var caracteres = '0123456789';
+  for (var i = 0; i < tamanho; i++) {
+      stringAleatoria += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+  }
+  return stringAleatoria;
+}
 
 }

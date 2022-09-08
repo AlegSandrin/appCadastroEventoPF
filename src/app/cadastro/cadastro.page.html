@@ -41,32 +41,33 @@
 
     <ion-item color="orange" mode="md" class="fundobranco" fill="solid">
       <ion-label position="floating">Senha:</ion-label>
-      <ion-input [(ngModel)]="userRegister.senha" type="password" formControlName="senha"></ion-input>
+      <ion-input [(ngModel)]="userRegister.senha" type="password" formControlName="senha" clearInput></ion-input>
     </ion-item>
 
     <ion-item color="orange" mode="md" class="fundobranco" fill="solid">
       <ion-label position="floating">CPF:</ion-label>
-      <ion-input type="number" formControlName="cpf"></ion-input>
+      <ion-input type="number" formControlName="cpf" clearInput></ion-input>
     </ion-item>
 
     <ion-item color="orange" mode="md" class="fundobranco" fill="solid">
       <ion-label position="floating">Idade:</ion-label>
-      <ion-input type="number" formControlName="idade"></ion-input>
+      <ion-input type="number" formControlName="idade" clearInput></ion-input>
     </ion-item >
 
     <ion-item color="orange" mode="md" class="fundobranco" fill="solid">
       <ion-label position="floating">Telefone:</ion-label>
-      <ion-input type="number" formControlName="telefone"></ion-input>
+      <ion-input type="number" formControlName="telefone" clearInput></ion-input>
     </ion-item>
 
     <ion-item color="orange" mode="md" class="fundobranco" fill="solid">
       <ion-label position="floating">Cidade:</ion-label>
-      <ion-input type="text" formControlName="cidade"></ion-input>
+      <ion-input type="text" formControlName="cidade" minlength="4" maxlength="40" clearInput></ion-input>
     </ion-item>
 
     <ion-item color="orange" mode="md" class="fundobranco" fill="solid">
       <ion-label position="floating">CEP:</ion-label>
-      <ion-input type="number" formControlName="cep"></ion-input>
+      <ion-input type="text" formControlName="cep" pattern="[0-9]*" minlength="8" maxlength="8" clearInput
+      value="Limpar"></ion-input>
     </ion-item>
 
 

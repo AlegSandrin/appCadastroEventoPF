@@ -1,4 +1,6 @@
-<body style="background-color: rgb(246, 246, 246);">
+<ion-content [fullscreen]="true">
+
+<body style="background-color: rgb(246, 246, 246);"></body>
 
 <ion-header >
 <ion-toolbar mode="md" class="toolbar">
@@ -11,10 +13,6 @@
 </ion-toolbar>
 </ion-header>
 
-
-<ion-content class="transparent2">
-
-
 <hr style="background-color:rgb(228, 142, 44);" class="hr1">
 
 <img class="imagem" src="assets/img/avataricon.png">
@@ -22,68 +20,60 @@
 
 <div id="container">
 
+  <h1> Dados do úsuario: </h1>
 
 
-<form>
-
-  <ion-list class="alinhar" lines="none">
+  <ion-list *ngIf="dados" class="alinhar" lines="none">
 
     <ion-item color="orange" mode="md" class="fundobranco" fill="outline" >
-      <ion-input disabled="true" type="text" placeholder="Número do ingresso:"></ion-input>
+      <ion-label position="stacked">Número do ingresso:</ion-label>
+      <ion-input readonly="true" type="text" value="{{dados.numingresso}}" ></ion-input>
       </ion-item>
 
-      <ion-item color="orange" mode="md" class="fundobranco" fill="outline" >
-        <ion-input disabled="true" type="text" placeholder="Número do pedido:"></ion-input>
-        </ion-item>
-
         <ion-item color="orange" mode="md" class="fundobranco" fill="outline" >
-          <ion-input disabled="true" type="text" placeholder="Código do Ticket:"></ion-input>
+          <ion-label position="stacked">Código do Ticket:</ion-label>
+          <ion-input readonly="true" type="text" value="{{dados.codingresso}}"></ion-input>
           </ion-item>
 
-<br>
 
   <ion-item color="orange" mode="md" class="fundobranco" fill="outline" >
     <ion-label position="stacked">Nome:</ion-label>
-  <ion-input readonly type="text">{{nome}}</ion-input>
+  <ion-input disabled="{{atualizar}}" type="text" value="{{nome}}" [(ngModel)]="nome"></ion-input>
   </ion-item>
-
-
 
   <ion-item color="orange" mode="md" class="fundobranco" fill="outline" >
     <ion-label position="stacked">Email:</ion-label>
-  <ion-input readonly type="password">{{email}}</ion-input>
+  <ion-input disabled="{{atualizar}}" type="email" value="{{email}}" [(ngModel)]="email"></ion-input>
   </ion-item>
-
-
 
 <ion-item color="orange" mode="md" class="fundobranco" fill="outline" >
   <ion-label position="stacked">CPF:</ion-label>
-  <ion-input readonly type="text">{{cpf}}</ion-input>
+  <ion-input disabled="{{atualizar}}" type="text" value="{{cpf}}" [(ngModel)]="cpf"></ion-input>
   </ion-item>
-
-
 
   <ion-item color="orange" mode="md" class="fundobranco" fill="outline" >
     <ion-label position="stacked">Idade:</ion-label>
-  <ion-input readonly type="password">{{idade}}</ion-input>
+  <ion-input disabled="{{atualizar}}" type="number" value="{{idade}}" [(ngModel)]="idade"></ion-input>
   </ion-item>
 
   <ion-item color="orange" mode="md" class="fundobranco" fill="outline" >
     <ion-label position="stacked">Telefone:</ion-label>
-    <ion-input readonly type="password">{{telefone}}</ion-input>
+    <ion-input disabled="{{atualizar}}" type="number" value="{{telefone}}" [(ngModel)]="telefone"></ion-input>
     </ion-item>
 
+    <ion-item color="orange" mode="md" class="fundobranco" fill="outline" >
+      <ion-label position="stacked">Senha:</ion-label>
+      <ion-input disabled="{{atualizar}}" type="password" value="{{senha}}" [(ngModel)]="senha"></ion-input>
+      </ion-item>
+
 <br>
-
-<br><ion-button class="botao" expand="block" class="button" shape="round">Atualizar Dados</ion-button>
-
-<br><br><br>
+<ion-button expand="block" shape="round" (click)="atualizarDados()">Atualizar Dados</ion-button>
+<ion-button expand="block" shape="round" (click)="confirmar()" disabled="{{atualizar}}">Confirmar alterações</ion-button>
 
 </ion-list>
-</form>
 
 
 </div>
-</ion-content>
 
-</body>
+
+</ion-content>

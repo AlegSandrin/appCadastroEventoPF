@@ -1,13 +1,21 @@
 #container {
+  width: 90%;
+  transform: translateY(-10%);
   text-align: center;
-
-  position: relative;
-  left: 0;
-  right: 0;
-  top: 2%;
+  display: block;
+  align-items: center;
+  justify-content: center;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 font-style:initial;
+margin: auto;
 }
+
+
+
+h1{
+  color:black;
+}
+
   
   .toolbar {
  color:black;
@@ -18,11 +26,10 @@ font-style:initial;
     --width: 500px;
   }
 
-
   
   .imagem{
-width: 150px;
-height: 150px;
+width: 55%;
+height: 25%;
 position:relative;
 top:10%;
 display: block;
@@ -31,10 +38,10 @@ transform: translateY(-70%);
   }
 
   .hr1 {
-    top:70px;
-    height: 50px;
+    top:12%;
+    height: 10%;
 position:relative;
-    border-top: 30px thick solid rgb(0, 0, 0);
+    border-top: 2% thick solid rgb(0, 0, 0);
     width: 100%;
     color:rgb(213, 129, 32);
    }
@@ -58,18 +65,4 @@ position:relative;
     .alinhar{
       background:none;
       --background:none;
-      width:80%;
-      height: auto;
-      left:10%;
-      right:0;
-      top:240px;
-      position:relative;
-    transform: translateY(-50%);
-    }
-
-    .transparent2{
-      border-color: rgba(0, 0, 0, 0);
-      background-color: rgba(0, 0, 0, 0);
-        background: transparent;
-        --background: transparent;
     }

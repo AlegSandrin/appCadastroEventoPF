@@ -1,8 +1,7 @@
 #container {
-
-    top: 10%;
-
-  
+    top: 5%;
+    margin-bottom: 10%;
+    position:relative;
   }
 
   .transparent{
@@ -35,9 +34,10 @@
 }
 
 .titulos{
-    font-size:18px;
-    padding: 3px;
-    font-weight: 900; 
+    font-size:100%;
+    font-weight: 500; 
+    font-weight: bold;
+    color:rgb(0, 0, 0);
  }
  #textos{
      font-size:15px;

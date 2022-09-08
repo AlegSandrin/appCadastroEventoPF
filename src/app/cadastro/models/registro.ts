@@ -7,5 +7,7 @@ export interface Registro {
     telefone?: string;
     cep?: string;
     cidade?: string;
+    codingresso?: string;
+    numingresso?: string;
 
 }

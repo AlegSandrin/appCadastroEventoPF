@@ -11,8 +11,8 @@ import { CadastroPage } from './cadastro.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    CadastroPageRoutingModule,
     ReactiveFormsModule,
+    CadastroPageRoutingModule,
   ],
   declarations: [CadastroPage]
 })

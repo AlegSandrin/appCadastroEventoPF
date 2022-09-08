@@ -1,16 +1,27 @@
 import { Component } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/compat/database';
-import { Observable } from 'rxjs';
-
-
+import { getAuth, signOut } from "firebase/auth";
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  items: Observable<any[]>;
-  constructor(db: AngularFireDatabase) {
-    this.items = db.list('items').valueChanges();
+
+  constructor(private router: Router) {}
+
+signOut(){
+
+const auth = getAuth();
+signOut(auth).then(() => {
+  
+this.router.navigateByUrl("/home");
+
+}).catch((error) => {
+
+
+});
+
 }
+
 }

@@ -17,7 +17,7 @@ body {
     </ion-header>
     
   
-    <ion-content [fullscreen]="true" scroll-y="false">
+    <ion-content [fullscreen]="true">
   <ion-list class="menu-items" lines="none">
   
     <ion-menu-toggle>
@@ -47,9 +47,9 @@ body {
   </ion-menu-toggle>
 
   <ion-menu-toggle>
-      <ion-item routerLink="/home"> 
+      <ion-item (click)="signOut()"> 
          <ion-icon name="log-out-outline"></ion-icon> Sair
-        </ion-item>
+      </ion-item>
   </ion-menu-toggle>
 
 

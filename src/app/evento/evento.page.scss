@@ -1,7 +1,7 @@
 .container {
-
-    top: 10%;
-
+    display: block;
+    align-items: center;
+    justify-content: center;
   }
 
   .transparent{
@@ -11,24 +11,16 @@
     --background: transparent;
     color:black;
 
-
-
 }
 
-.transparent2{
-	border-color: rgba(0, 0, 0, 0);
-	background-color: rgba(0, 0, 0, 0);
-    background: transparent;
-    --background: transparent;
-}
-
-#container2{
-    top: 10%; 
+#container{
+    top: 5%;
+    margin-bottom: 10%;
     position:relative;
 }
 
 .texto2{
-    position:relative;
+    display:block;
     top: 1%;
     color:black;
 
@@ -50,14 +42,13 @@
 }
 
 .titulos{
-    font-size:18px;
-    padding: 3px;
-    font-weight: 900; 
+    font-size:100%;
+    font-weight: 500; 
+    font-weight: bold;
     color:rgb(0, 0, 0);
  }
  #textos{
-     font-size:15px;
-     padding: 3px;
+    display:block;
   }
 
   .toolbar1 {
@@ -65,3 +56,7 @@
     --background:rgb(213, 129, 32);
      }
  
+     p{
+        font-size: 100%;
+        font-weight: bold;
+     }
