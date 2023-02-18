@@ -26,7 +26,7 @@ body {
       <ion-avatar slot="start">
         <img src="assets/img/avataricon_orange.png">
       </ion-avatar>
-      <ion-label>(Nome da Pessoa)</ion-label>
+      <ion-label *ngIf="usuario">{{usuario.nome}}</ion-label>
     </ion-item>
 
         <ion-item routerLink="/perfil">
